@@ -28,14 +28,11 @@ var displayBikeInfo = function(bike) {
       bike.description = "no description available";
     }
   $('.bike-name').append(`<li> Description: ${bike.description} </li> <li> Frame color: ${bike.frame_colors}</li> <li> Frame model: ${bike.frame_model}</li> <li style="color:blue;   text-decoration: underline;" id="view-image">View image</li> <li>Stolen from: ${bike.stolen_location}</li>`);
+  if(bike.large_img == null) {
+    $('#view-image').hide();
+  }
   $('#view-image').click(function(){
-
-     if (bike.large_img == null) {
-     $('#view-image').hide()
-
-    } else {
       openInNewTab(bike.large_img);
-    }
   });
 };
 

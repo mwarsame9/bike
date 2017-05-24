@@ -9,14 +9,16 @@ Bike.prototype.getAllBikes = function(city, displayAllInfo) {
   displayAllInfo(city, response['bikes']);
 
   }).fail(function(error) {
-    $('#displayBikeInfo').text(error.responseJSON.message);
+    $('.output').text(error.responseJSON.message);
   });
 };
 
 
-Bike.prototype.getBikeInfo = function(bikeId) {
-  $.get(`https://bikeindex.org:443/api/v3/bikes/${bikeId}`).then(function(response){
+Bike.prototype.getBikeInfo = function(foundBikeId, displayBikeInfo) {
+  $.get(`https://bikeindex.org:443/api/v3/bikes/${foundBikeId}`).then(function(response){
     displayBikeInfo(response.bike);
+  }).fail(function(error) {
+    $('.bike-info').text(error.responseJSON.message);
   });
 };
 

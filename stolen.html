@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
+    <link href="build/css/styles.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="build/js/app.js"></script>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Bikes</title>
   </head>
   <body>
     <div class="container">
       <nav class="navbar navbar-inverse bg-inverse">
+        <a class="navbar-brand" href="/">Home</a>
         <a class="navbar-brand" href="stolen.html">All Stolen Bikes</a>
         <a class="navbar-brand" href="search.html">Search</a>
-        <a class="navbar-brand" href="/">Home</a>
       </nav>
       <h1>All The Stolen Bikes</h1>
       <form>
@@ -21,10 +21,23 @@
         <input type="text" id="user-location">
         <button type="button" id='submit-button'>Submit</button>
       </form>
-      <div >
-        <ul class="output">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="output">
+              <ul>
 
-        </ul>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bike-name">
+              <ul>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

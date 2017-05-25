@@ -3,8 +3,18 @@
   position: fixed;
 }
 
-#search-section {
+.search-section {
+  font-size: 30px;
+  font-family: 'Josefin Sans';
+  color: white;
   text-align: center;
+  button{
+    box-shadow: 2px 2px 4px white;
+    background-color: rgba(0, 0, 0, .0);
+  }
+  form {
+    color: black;
+  }
 }
 
 .output {
@@ -12,10 +22,14 @@
   padding-top: 5%;
   width: 70%;
   list-style: none;
-  background-color: rgba(211, 211, 211, .8);
+  background-color: rgba(150, 150, 150, .8);
   border: 2px solid white;
 
   li{
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: 'bitter';
     text-decoration: underline;
     text-align: center;
   }
@@ -23,6 +37,7 @@
 
 nav {
   a {
+    font-family: 'Josefin Sans';
     color: white;
   }
 }
@@ -42,11 +57,11 @@ nav {
 
 #big-map {
   height: 600px;
-  width: 80%;
+  width: 95%;
 }
 
 #big-map-div {
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 40%;
   position: fixed;
 }
@@ -62,4 +77,10 @@ nav {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.stolen-bike-image {
+  position: fixed;
+  height: 300px;
+  width: 400px;
 }

@@ -3,13 +3,13 @@ var Bike = require('./../js/bike.js').bikeModule;
 
 var displayAllInfo = function(city, bikes) {
     getIds(bikes);
+    $('.output').empty()
     bikes.forEach(function(bike) {
       $('.output').append(`<li style="cursor: pointer" class="bike-click" value="${bike.id}">${bike.title}</li>`);
   });
   $(".bike-click").click(function(){
-    $('.output').show()
-    $('#big-map-div').hide()
-    $('#map-div').show()
+    $('#big-map-div').hide();
+    $('#map-div').show();
     var bike = new Bike();
     var foundBikeId = $(this).val();
     bike.getBikeInfo(foundBikeId, displayBikeInfo, createMap);
@@ -44,7 +44,8 @@ function createMap(latitude,longitude) {
   });
   var marker = new google.maps.Marker({
     position: uluru,
-    map: map
+    map: map,
+    icon: 'img/icon4.png'
   });
 }
 
@@ -66,9 +67,10 @@ $(document).ready(function(){
   $('#map-div').hide();
   $('.output').hide();
   var bike = new Bike();
-  $('#submit-button').click(function(){
-    $('#big-map-div').show()
-    $('.output').fadeIn(3000);
+  $('#submit-button').click(function(e){
+    e.preventDefault();
+    $('#big-map-div').show();
+    $('.output').fadeIn(2000);
     var city = $('#user-location').val();
     bike.getAllBikes(city, displayAllInfo, getIds);
   });

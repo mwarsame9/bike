@@ -26,7 +26,7 @@ Bike.prototype.createBigMap = function(ids) {
   $.get(`https://bikeindex.org:443/api/v3/bikes/${ids[0]}`).then(function(response){
     var place = {lat: response.bike.stolen_record.latitude, lng: response.bike.stolen_record.longitude};
     var bigMap = new google.maps.Map(document.getElementById('big-map'), {
-      zoom: 8,
+      zoom: 10,
       center: place
     });
   ids.forEach(function(id){
@@ -34,7 +34,8 @@ Bike.prototype.createBigMap = function(ids) {
         var coords = {lat: response.bike.stolen_record.latitude, lng: response.bike.stolen_record.longitude};
         var marker = new google.maps.Marker({
           position: coords,
-          map: bigMap
+          map: bigMap,
+          icon: 'img/icon5.png'
         });
         });
       });

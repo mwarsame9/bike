@@ -67,7 +67,6 @@ $(document).ready(function(){
   $('.output').hide();
   var bike = new Bike();
   $('#submit-button').click(function(){
-    $('.output').()
     $('#big-map-div').show()
     $('.output').fadeIn(3000);
     var city = $('#user-location').val();

@@ -14,9 +14,10 @@ Bike.prototype.getAllBikes = function(city, displayAllInfo) {
 };
 
 
-Bike.prototype.getBikeInfo = function(foundBikeId, displayBikeInfo) {
+Bike.prototype.getBikeInfo = function(foundBikeId, displayBikeInfo,createMap) {
   $.get(`https://bikeindex.org:443/api/v3/bikes/${foundBikeId}`).then(function(response){
     displayBikeInfo(response.bike);
+    createMap(response.bike.stolen_record.latitude, response.bike.stolen_record.longitude);
   }).fail(function(error) {
     $('.bike-info').text(error.responseJSON.message);
   });

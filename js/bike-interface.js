@@ -1,3 +1,4 @@
+
 var Bike = require('./../js/bike.js').bikeModule;
 
 var displayAllInfo = function(city, bikes) {
@@ -7,20 +8,9 @@ var displayAllInfo = function(city, bikes) {
   $(".bike-click").click(function(){
     var bike = new Bike();
     var foundBikeId = $(this).val();
-    bike.getBikeInfo(foundBikeId, displayBikeInfo);
+    bike.getBikeInfo(foundBikeId, displayBikeInfo, createMap);
   });
 };
-
-
-
-function openInNewTab(url) {
-  var win = window.open(url, '_blank');
-  win.focus();
-}
-
-
-
-
 
 var displayBikeInfo = function(bike) {
   $('.bike-name').html(`<h1> ${bike.title} </h1> `);
@@ -36,17 +26,33 @@ var displayBikeInfo = function(bike) {
   });
 };
 
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+
+function createMap(latitude,longitude) {
+  var uluru = {lat: latitude, lng: longitude};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+};
 
 
 
 
 $(document).ready(function(){
+  $('.output').hide();
   var bike = new Bike();
   $('#submit-button').click(function(){
+    $('.output').fadeIn(3000)
     var city = $('#user-location').val();
     bike.getAllBikes(city, displayAllInfo);
   });
-
-
-
 });

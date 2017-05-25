@@ -1,3 +1,53 @@
 .bike-name {
+  margin-top: 5%;
   position: fixed;
+}
+
+#search-section {
+  text-align: center;
+}
+
+.output {
+  margin-top: 8%;
+  padding-top: 5%;
+  width: 70%;
+  list-style: none;
+  background-color: rgba(211, 211, 211, .8);
+  border: 2px solid white;
+
+  li{
+    text-decoration: underline;
+    text-align: center;
+  }
+}
+
+nav {
+  a {
+    color: white;
+  }
+}
+
+#map {
+  border: 4px solid white;
+  height: 400px;
+  width: 80%;
+}
+
+#map-div {
+  margin-top: 25%;
+  margin-left: 40%;
+  position: fixed;
+}
+
+.bg {
+  background-image: url(../../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

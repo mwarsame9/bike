@@ -20,13 +20,8 @@ Bike application that returns the lost bikes in a given location a user enters. 
 ### Known Bugs
 * No known bugs
 
-### Technologies Used
-* Tech 1
-* Tech 2
-* Tech 3
-
 ## Authors
-Jason Ainsworth & Mohamed Warsame
+Mohamed Warsame
 
 ### License
 _MIT_

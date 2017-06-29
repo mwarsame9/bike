@@ -1,18 +1,33 @@
-# README title
-This is a brief description of what the software does.
+# Bike Finder
+
+Bike application that returns the lost bikes in a given location a user enters. The application also shows a map of the locations. This application uses APIs from bikeindex.org and Google Maps.
+
 ### Setup/Installation Requirements
-* list item 1
-* list item 2
-* list item 3
+
+* npm install  
+* bower install
+
+## Built With
+
+* Bootstrap
+* CSS
+* HTML
+* Javascript
+* JSON
+* Browserify
+* Node.js
+
 ### Known Bugs
-List known bugs or issues here
+* No known bugs
+
 ### Technologies Used
 * Tech 1
 * Tech 2
 * Tech 3
-### By Authors
-### Support and contact details
-_contact info here_
+
+## Authors
+Jason Ainsworth & Mohamed Warsame
+
 ### License
 _MIT_
-Copyright (c) _year_ **Author or Organization**
+Copyright (c) 2017 
